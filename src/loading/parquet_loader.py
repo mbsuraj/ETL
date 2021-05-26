@@ -21,7 +21,7 @@ class ParquetLoader:
         :return: load data into spark session
         """
         if self._schema is not None:
-            df = self._spark.read.options(**self._options).schema(self._schema).csv(self._data_file)
+            df = self._spark.read.options(**self._options).schema(self._schema).parquet(self._data_file)
         else:
-            df = self._spark.read.options(**self._options).csv(self._data_file)
+            df = self._spark.read.options(**self._options).parquet(self._data_file)
         return df
