@@ -2,8 +2,8 @@ from pyspark.sql import DataFrame
 import pandas as pd
 import numpy as np
 from pyspark.sql.functions import lit
-from src.cleaning.transforming import pandas_transformers_pool as ptp
-from src.cleaning.transforming import spark_transformers_pool as stp
+from src.transform import pandas_transformers_pool as ptp
+from src.transform import spark_transformers_pool as stp
 
 
 class Organizer:

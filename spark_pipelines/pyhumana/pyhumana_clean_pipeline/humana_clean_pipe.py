@@ -1,5 +1,5 @@
-from src.loading import loader_adaptor_factory as laf
-from src.cleaning import null_cleaner, organizer
+from src.load import loader_adaptor_factory as laf
+from spark_pipelines.pyhumana.pyhumana_clean_pipeline import null_cleaner, organizer
 from data_catalog.catalog import catalog
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col

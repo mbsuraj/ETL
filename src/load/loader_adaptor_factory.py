@@ -1,7 +1,7 @@
 import os
-from src.loading.csv_loader import CSVLoader
-from src.loading.xlsx_loader import XLSXLoader
-from src.loading.parquet_loader import ParquetLoader
+from src.load.csv_loader import CSVLoader
+from src.load.xlsx_loader import XLSXLoader
+from src.load.parquet_loader import ParquetLoader
 
 class LoaderAdaptorFactory:
     def __init__(self):
