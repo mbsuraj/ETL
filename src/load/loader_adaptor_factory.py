@@ -1,6 +1,7 @@
 import os
-from src.loading.csv_loader import CSVLoader
-from src.loading.xlsx_loader import XLSXLoader
+from src.load.csv_loader import CSVLoader
+from src.load.xlsx_loader import XLSXLoader
+from src.load.parquet_loader import ParquetLoader
 
 class LoaderAdaptorFactory:
     def __init__(self):
@@ -26,7 +27,8 @@ class LoaderAdaptorFactory:
             'csv': CSVLoader,
             'xlsx': XLSXLoader,
             'tsv': '',
-            'xml': ''
+            'xml': '',
+            "parquet": ParquetLoader
         }
         data_file_format = data_file.split('.')[1]
         assert (data_file_format in loader_dict.keys()) and (loader_dict[data_file_format] != ''),\

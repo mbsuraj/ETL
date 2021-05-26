@@ -1,5 +1,5 @@
-from src.loading import loader_adaptor_factory as laf
-from src.cleaning import null_cleaner, organizer
+from src.load import loader_adaptor_factory as laf
+from spark_pipelines.pyhumana.pyhumana_clean_pipeline import null_cleaner, organizer
 from data_catalog.catalog import catalog
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
@@ -31,7 +31,8 @@ def main():
     # clean null data
     # define schema
     integer_columns = []
-    short_columns = ['Days']
+    short_columns = ['Days', 'PAY_DAY_SUPPLY_CNT', 'PAYABLE_QTY', 'pay_day_supply_count',
+                     'charge_amount', 'rx_cost', 'net_paid_amount', 'member_responsible_amount']
     string_columns = [c for c in humana_df.columns if c not in integer_columns + short_columns]
     cast_dict = {
         IntegerType: integer_columns,
