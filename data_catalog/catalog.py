@@ -17,9 +17,10 @@ def _resource(zone, key):
 
 
 catalog = {
-    "clean/holdout": _resource("clean", "holdout"),
-    "clean/composite": _resource("clean", "composite"),
+    "clean/holdout": _resource("clean", "holdout.parquet"),
+    "clean/composite": _resource("clean", "composite.parquet"),
     "landing/event_attributes": _resource("landing", "event_attributes.csv"),
     "landing/holdout": _resource("landing", "HMAHCC_HOLDOUT.csv"),
     "landing/composite": _resource("landing", "HMAHCC_COMP.csv"),
+    "business/holdout": _resource("business", "holdout")
 }
