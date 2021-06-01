@@ -22,5 +22,6 @@ catalog = {
     "landing/event_attributes": _resource("landing", "event_attributes.csv"),
     "landing/holdout": _resource("landing", "HMAHCC_HOLDOUT.csv"),
     "landing/composite": _resource("landing", "HMAHCC_COMP.csv"),
-    "business/holdout": _resource("business", "holdout")
+    "business/holdout": _resource("business", "holdout.parquet"),
+    "business/composite": _resource("business", "composite.parquet")
 }
