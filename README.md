@@ -5,8 +5,8 @@ project is to create a data pipeline that transforms
 and loads **_very large_** data sets into databases
 
 ## Technology
-Python
-bash script
+1. Python. 
+2. bash script. 
 
 ## Setup 
 Coming soon :) 
